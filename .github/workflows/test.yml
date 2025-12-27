@@ -21,12 +21,3 @@ jobs:
 
    - name: build with gradlew
      run: ./gradlew build
-
-  
-  
-    
-      
-     
-     
-
-    
