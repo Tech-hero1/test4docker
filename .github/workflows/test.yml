@@ -18,12 +18,13 @@ jobs:
    - uses: actions/setup-java@v4
      with:
       java-version: 4.0
-
+      
    - name: Execute permission for gradlew
      run: chmod +x gradlew
 
    - name: build with gradlew
      run: ./gradlew build
+   
    - name: Build and Push
      uses: docker/build-push-action@v6
 
@@ -33,4 +34,5 @@ jobs:
           image: itpro2025/demo-app:tagname
           registry: docker.io
           username: ${{ secrets.DOCKER }}
+          password: ${{ secrets.TESTDOCKER }}}}
           password: ${{ secrets.TESTDOCKER }}
